@@ -1,0 +1,21 @@
+docker-compose up --build
+
+Python app: http://localhost:8000
+
+Metrics: http://localhost:8000/metrics
+
+Prometheus UI: http://localhost:9090
+
+In prometheus.yml, the target app:8000 refers to the Docker service name (app) defined in the docker-compose.yml file, like this:
+
+Docker Compose creates a network where services can talk to each other using their service names as hostnames.
+
+So:
+
+    app:8000 = service app running on port 8000
+
+    Prometheus can resolve app to the correct container IP address internally
+
+f you wrote localhost:8000, Prometheus (which is in its own container) would look for port 8000 inside its own container, not the app's.
+
+Only app:8000 works inside the Docker network created by Compose.
