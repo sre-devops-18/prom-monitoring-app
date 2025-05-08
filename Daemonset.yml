@@ -1,18 +1,17 @@
 apiversion: apps/v1
 kind: Daemonset
 metadata:
-  name: 
-  namespace: default
+  name: my-daemonset
   labels:
-    name: prom-daemon-set
+    app: prometheus
 spec:
   selector:
     matchLabels:
-      name: prom-daemon-set
+      app: prometheus
   template:
     metadata:
       labels:
-        name: prom-daemon-set
+        app: prometheus
     spec:
       containers:
       - name: prometheus
