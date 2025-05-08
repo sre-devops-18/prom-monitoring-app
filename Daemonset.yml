@@ -4,18 +4,18 @@ metadata:
   name: prom-daemon-set
   namespace: default
   labels:
-    app: node-info
+    app: prom-daemon-set
 spec:
   selector:
     matchLabels:
-      app: node-info
+      app: prom-daemon-set
   template:
     metadata:
       labels:
-        app: node-info
+        app: prom-daemon-set
     spec:
       containers:
       - name: prometheus
-        image: prom/prometheus
+        image: prom/prometheus:latest
         ports:
         - containerport: 9090
