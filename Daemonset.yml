@@ -1,0 +1,20 @@
+apiversion: app/v1
+kind: Daemonset
+metadata:
+  name: prom-daemon-set
+  labels:
+    app: node-info
+spec:
+  selector:
+    matchLabels:
+      app: node-info
+  template:
+    metadata:
+      labels:
+        app: node-info
+    spec:
+      containers:
+      - name: prometheus
+        image: prom/prometheus
+        ports:
+        - containerport: 9090
