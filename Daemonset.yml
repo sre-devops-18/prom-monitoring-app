@@ -1,4 +1,4 @@
-apiversion: app/v1
+apiversion: v1
 kind: Daemonset
 metadata:
   name: prom-daemon-set
