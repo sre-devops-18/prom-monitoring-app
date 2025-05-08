@@ -2,6 +2,7 @@ apiversion: apps/v1
 kind: Daemonset
 metadata:
   name: prom-daemon-set
+  namespace: default
   labels:
     app: node-info
 spec:
