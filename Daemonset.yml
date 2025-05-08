@@ -3,15 +3,15 @@ kind: Daemonset
 metadata:
   name: my-daemonset
   labels:
-    app: prometheus
+    app: node-info
 spec:
   selector:
     matchLabels:
-      app: prometheus
+      app: node-info
   template:
     metadata:
       labels:
-        app: prometheus
+        app: node-info
     spec:
       containers:
       - name: prometheus
