@@ -1,7 +1,7 @@
 apiversion: apps/v1
 kind: Daemonset
 metadata:
-  name: prom-daemon-set
+  name: 
   namespace: default
   labels:
     name: prom-daemon-set
@@ -19,4 +19,3 @@ spec:
         image: prom/prometheus:latest
         ports:
         - containerport: 9090
-        
