@@ -1,17 +1,18 @@
 apiversion: apps/v1
-kind: Daemonset
+kind: DaemonSet
 metadata:
   name: my-daemonset
+  namespace: monitoring
   labels:
-    app: node-info
+    app: my-daemonset
 spec:
   selector:
     matchLabels:
-      app: node-info
+      app: my-daemonset
   template:
     metadata:
       labels:
-        app: node-info
+        app: my-daemonset
     spec:
       containers:
       - name: prometheus
