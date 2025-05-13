@@ -13,8 +13,8 @@ spec:
         app: prom-monitoring
     spec:
       containers:
-        - name: prom-monitoring-container
-          image: prom/prom-monitoring/latest
+        - name: prometheus
+          image: prom/prometheus
           ports:
             - containerPort: 9100
           resources:
@@ -24,4 +24,3 @@ spec:
             requests:
               memory: "100Mi"
               cpu: "100m"
-              
