@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3'
 
 services:
   app:
@@ -21,6 +21,6 @@ services:
     image: elasticsearch:latest
     container_name: hopeful_cohen
     volumes:
-      - es_data:/usr/share/elasticsearch/data
+      - ./es_data:/usr/share/elasticsearch/data
     ports:
       - "9200:9200"
