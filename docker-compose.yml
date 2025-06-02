@@ -19,7 +19,7 @@ services:
     
   elk:
     image: elasticsearch:9.0.1
-    container_name: hopeful_cohen
+    container_name: hopeful_cohen_2
     volumes:
       - ./es_data:/usr/share/elasticsearch/data
     ports:
